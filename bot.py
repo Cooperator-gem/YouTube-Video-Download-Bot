@@ -2,6 +2,7 @@ from pyrogram import Client, filters
 from pytube import YouTube
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import asyncio
+import time  # Import the time module
 
 # Replace 'YOUR_API_ID', 'YOUR_API_HASH', and 'YOUR_BOT_TOKEN' with your actual values
 API_ID = '16393106'
@@ -68,9 +69,15 @@ async def process_youtube_link(client, message):
         # Send successful upload message
         await message.reply_text("\n\nOWNER : @unknownpersonzz 💕\n\nSUCCESSFULLY UPLOADED!")
 
+        # Add a delay to avoid flooding
+        time.sleep(5)
+
     except Exception as e:
         error_text = 'Error: Failed to process the YouTube link. Please make sure the link is valid and try again.'
         await message.reply_text(error_text)
+
+        # Add a delay to avoid flooding
+        time.sleep(5)
 
 # Start the bot
 print("🎊 I AM ALIVE 🎊")
