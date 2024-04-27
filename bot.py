@@ -17,7 +17,7 @@ app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 @app.on_message(filters.command("start"))
 def start(client, message):
     user = message.from_user
-    message.reply_text(f"Hello, @{user.username}!\n\nSend me the YouTube link of the video you want to upload.")
+    message.reply_text(f"Hello, @{user.username}!\n\nSend me the YouTube link of the video you want to upload.\n\n👑OWNER👑 - @unknownpersonzz\n💫SUPPORT💫  - https://t.me/unknownpersonzz ")
 
 # Help command handler
 @app.on_message(filters.command("help"))
@@ -29,7 +29,7 @@ To upload a YouTube video, simply send me the YouTube link.
     
 Enjoy using the bot!
 
-   ©️ Channel : @NT_BOT_CHANNEL
+   ©️ Channel : @unknownpersonzz
     """
     message.reply_text(help_text)
 
@@ -58,7 +58,7 @@ async def process_youtube_link(client, message):
         await uploading_msg.delete()
 
         # Send successful upload message
-        await message.reply_text("\n\nOWNER : @LISA_FAN_LK 💕\n\nSUCCESSFULLY UPLOADED!")
+        await message.reply_text("\n\nOWNER : @unknownpersonzz 💕\n\nSUCCESSFULLY UPLOADED!")
 
     except Exception as e:
         error_text = 'Error: Failed to process the YouTube link. Please make sure the link is valid and try again.'
