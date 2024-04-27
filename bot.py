@@ -1,5 +1,6 @@
-from pyrogram import Client, filters, InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import Client, filters
 from pytube import YouTube
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import asyncio
 
 # Replace 'YOUR_API_ID', 'YOUR_API_HASH', and 'YOUR_BOT_TOKEN' with your actual values
