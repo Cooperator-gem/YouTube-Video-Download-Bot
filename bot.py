@@ -2,9 +2,9 @@ from pyrogram import Client, filters
 from pytube import YouTube
 import asyncio
 
-API_ID = "YOUR_API_ID"
-API_HASH = "YOUR_API_HASH"
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+API_ID = "16393106"
+API_HASH = "061fbf1aff7eecf2edb8434ddbab7a7d"
+BOT_TOKEN = "7019653925:AAFtUsAz-2w3IglgY_tionN5qE6bkcr02F4"
 
 app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
