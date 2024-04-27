@@ -1,11 +1,8 @@
-
-# ©️ LISA-KOREA | @LISA_FAN_LK | NT_BOT_CHANNEL
-from pyrogram import Client, filters
+from pyrogram import Client, filters, InlineKeyboardButton, InlineKeyboardMarkup
 from pytube import YouTube
 import asyncio
 
 # Replace 'YOUR_API_ID', 'YOUR_API_HASH', and 'YOUR_BOT_TOKEN' with your actual values
-
 API_ID = '16393106'
 API_HASH = '061fbf1aff7eecf2edb8434ddbab7a7d'
 BOT_TOKEN = '7019653925:AAFtUsAz-2w3IglgY_tionN5qE6bkcr02F4'
@@ -17,7 +14,17 @@ app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 @app.on_message(filters.command("start"))
 def start(client, message):
     user = message.from_user
-    message.reply_text(f"Hello, @{user.username}!\n\nSend me the YouTube link of the video you want to upload.\n\n👑OWNER👑 - @unknownpersonzz \n💫SUPPORT💫  - https://t.me/unknownpersonzz")
+    
+    # Creating the inline keyboard markup
+    inline_keyboard = InlineKeyboardMarkup([
+        [InlineKeyboardButton("👑OWNER👑", url="https://t.me/unknownpersonzz")],
+        [InlineKeyboardButton("💫SUPPORT💫", url="https://t.me/unknownpersonzz")]
+    ])
+    
+    message.reply_text(
+        f"Hello, @{user.username}!\n\nSend me the YouTube link of the video you want to upload.",
+        reply_markup=inline_keyboard
+    )
 
 # Help command handler
 @app.on_message(filters.command("help"))
